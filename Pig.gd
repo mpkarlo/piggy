@@ -30,3 +30,8 @@ func move(xspeed, yspeed, delta):
 	position.y += yspeed * delta
 	animationPlayer.play("Run")
 	moving = true
+
+
+func _on_Pig_area_entered(area):
+	area.queue_free()
+	scale *= 1.1
